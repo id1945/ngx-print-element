@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-print-element": [
+        "dist/ngx-print-element"
+      ],
+      "ngx-print-element/*": [
+        "dist/ngx-print-element/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
