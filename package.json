@@ -1,6 +1,27 @@
 {
   "name": "ngx-print-element",
-  "version": "2.0.8",
+  "version": "2.0.10",
+  "description": "This library is built to provide a solution for printing on html elements.",
+  "keywords": [
+    "ngx",
+    "angular2",
+    "ng-print",
+    "ngx-print",
+    "ngx-printing",
+    "ngx-print-div",
+    "angular-print",
+    "ngx-print-html",
+    "ng-print-element",
+    "ngx-print-element",
+    "angular-print-html",
+    "angular-print-element"
+  ],
+  "author": "DaiDH <duonghuudai.id002@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/id1945/ngx-print-element.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
