@@ -35,11 +35,11 @@ export const getMarkup = (elementHtml: any, options: any) => {
   } else {
     stylesheets = Array.prototype.slice
       .call(document.getElementsByTagName('link'))
-      .map(link => link.href);
+      .map(link => link);
   }
 
-  stylesheets.forEach((href: any) => {
-    html.push(`<link rel="stylesheet" href="${href}">`);
+  stylesheets.forEach((f) => {
+    html.push(`<link rel="${f.rel}" href="${f.href}">`);
   });
 
   // If inline styles or list of inline styles are specified, override inline styles

@@ -1,7 +1,7 @@
 # ngx-print-element
 
 This library is built to provide a solution for printing on html elements.\
-This is the [demo](https://stackblitz.com/edit/angular-ngx-print-element?file=src/app/app.component.ts).
+This is the [stackblitz](https://stackblitz.com/edit/angular-ngx-print-element?file=src/app/app.component.html).
 
 ![Logo](https://raw.githubusercontent.com/id1945/ngx-print-element/master/ngx-print-element.png)
 
@@ -9,11 +9,6 @@ This is the [demo](https://stackblitz.com/edit/angular-ngx-print-element?file=sr
 Install `ngx-print-element` from `npm`:
 ```bash
 npm install ngx-print-element --save
-```
-Support Version
-```bash
-Angular 12: npm install ngx-print-element@2.0.5 --save
-Angular 8: npm install ngx-print-element@2.0.4 --save
 ```
 
 Add wanted package to NgModule imports:
@@ -104,14 +99,27 @@ export class AppComponent {
 
 | Field | Description | Type | Default |
 | --- | --- | --- | --- |
-| htmlType | Set element type(`'domObj'`,`'text'`) | string | `'domObj'` |
-| printMode | Way of printing | string(`'template'`,`'template-popup'`) | - |
+| htmlType | Set element type `domObj`,`text` | string | `'domObj'` |
+| printMode | Way of printing | string `template`,`template-popup` | - |
 | pageTitle | Print title | string | - |
 | templateString | Print template | - | - |
 | popupProperties | Set the new `window.open` parameters | string | -|
 | stylesheets | Set the external style sheet for printing | - | - |
 | styles | Set the internal style sheet for printing | - | - |
 
+
+## Support versions
+
+|     Versions    |
+| --------------- |
+| Angular 13      |
+| Angular 12      |
+| Angular 11      |
+| Angular 10      |
+| Angular 9       |
+| Angular 8       |
+
+\
 Author: `DaiDH`, Tel: `0845882882`
 
 ### License
