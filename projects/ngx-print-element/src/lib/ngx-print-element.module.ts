@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { NgxPrintElementComponent } from './ngx-print-element.component';
+import { NgxPrintElementDirective } from './ngx-print-element.directive';
 
 
 @NgModule({
   declarations: [
-    NgxPrintElementComponent
-  ],
-  imports: [
+    NgxPrintElementComponent,
+    NgxPrintElementDirective
   ],
   exports: [
-    NgxPrintElementComponent
+    NgxPrintElementComponent,
+    NgxPrintElementDirective
   ]
 })
 export class NgxPrintElementModule { }

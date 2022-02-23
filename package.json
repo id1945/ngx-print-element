@@ -1,6 +1,6 @@
 {
   "name": "ngx-print-element",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "This library is built to provide a solution for printing on html elements.",
   "keywords": [
     "ngx",

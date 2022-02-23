@@ -47,9 +47,7 @@ If somewhere you don't want to display you can use class print-none
   </tr>
 </table>
 
-<ngx-print-element #element="element">
-  <button (click)="element.print('demo')">Print</button>
-</ngx-print-element>
+<button [print]="['demo']">Print</button>
 ```
 
 ## 2# The second way needs configuration
@@ -71,12 +69,10 @@ If somewhere you don't want to display you can use class print-none
     <td>Mexico</td>
   </tr>
 </table>
+
+<button [print]="['demo', {printMode: 'template', pageTitle: 'Hello World'}]">Print</button>
 ```
-```html
-<ngx-print-element #element="element">
-  <button (click)="element.print('demo', {printMode: 'template', pageTitle: 'Hello World'})">Print</button>
-</ngx-print-element>
-```
+
 #### Services
 ```typescript
 import { Component } from '@angular/core';
