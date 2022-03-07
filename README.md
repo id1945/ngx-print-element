@@ -70,14 +70,26 @@ If somewhere you don't want to display you can use class print-none
   </tr>
 </table>
 
-<button [print]="['demo', { 
+<button [print]="['demo', config]">Print</button>
+```
+
+```typescript
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  public config = {
     printMode: 'template-popup',
-    popupProperties: 'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=1000',
+    popupProperties: 'toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,fullscreen=yes',
     pageTitle: 'Hello World',
     templateString: '<header>I\'m part of the template header</header>{{printBody}}<footer>I\'m part of the template footer</footer>',
-    stylesheets: [{rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css'}]
-    styles: ['.table { color: red; }', '.table td { color: green; }'],
-  }]">Print</button>
+    stylesheets: [{ rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' }],
+    styles: ['.table { color: red; }', '.table td { color: green; }']
+  }
+}
 ```
 
 #### Services
