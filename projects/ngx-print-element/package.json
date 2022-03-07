@@ -1,6 +1,6 @@
 {
   "name": "ngx-print-element",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "This library is built to provide a solution for printing on html elements.",
   "keywords": [
     "ng",
@@ -18,6 +18,9 @@
     "print-document",
     "angular",
     "angular2",
+    "print-html",
+    "print-element",
+    "print-html-element",
     "ng-print",
     "ngx-print",
     "ngx-printing",

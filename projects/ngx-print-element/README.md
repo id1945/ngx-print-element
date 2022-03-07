@@ -27,7 +27,7 @@ Need to import css
 Printing data sheet with id is up to you.\
 If somewhere you don't want to display you can use class print-none
 
-## 1# The first way doesn't need configuration
+### 1# The first way doesn't need configuration
 ```html
 <table id="demo">
   <tr>
@@ -50,7 +50,7 @@ If somewhere you don't want to display you can use class print-none
 <button [print]="['demo']">Print</button>
 ```
 
-## 2# The second way needs configuration
+### 2# The second way needs configuration
 ```html
 <table id="demo">
   <tr>
@@ -70,7 +70,14 @@ If somewhere you don't want to display you can use class print-none
   </tr>
 </table>
 
-<button [print]="['demo', {printMode: 'template', pageTitle: 'Hello World'}]">Print</button>
+<button [print]="['demo', { 
+    printMode: 'template-popup',
+    popupProperties: 'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=1000',
+    pageTitle: 'Hello World',
+    templateString: '<header>I\'m part of the template header</header>{{printBody}}<footer>I\'m part of the template footer</footer>',
+    stylesheets: [{rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css'}]
+    styles: ['.table { color: red; }', '.table td { color: green; }'],
+  }]">Print</button>
 ```
 
 #### Services
@@ -86,6 +93,7 @@ export class AppComponent {
   constructor(public print: NgxPrintElementService) {}
 }
 ```
+
 ```html
 <p id="demo">Angular-Print</p>
 <button (click)="print.print('demo')">Print</button>
@@ -95,25 +103,16 @@ export class AppComponent {
 
 | Field | Description | Type | Default |
 | --- | --- | --- | --- |
-| htmlType | Set element type `domObj`,`text` | string | `'domObj'` |
-| printMode | Way of printing | string `template`,`template-popup` | - |
-| pageTitle | Print title | string | - |
-| templateString | Print template | - | - |
-| popupProperties | Set the new `window.open` parameters | string | -|
-| stylesheets | Set the external style sheet for printing | - | - |
-| styles | Set the internal style sheet for printing | - | - |
+| htmlType | `domObj`,`text` | string | `'domObj'` |
+| printMode | `template`,`template-popup` | string | `template` |
+| popupProperties | Options [window.open](https://www.w3schools.com/jsref/met_win_open.asp) | string | blank |
+| pageTitle | Print title | string | blank |
+| templateString | html | string | blank |
+| stylesheets | Set the external style sheet for printing | object or object[] | null |
+| styles | Set the internal style sheet for printing | string or string[] | null |
 
 
-## Support versions
-
-|     Versions    |
-| --------------- |
-| Angular 13      |
-| Angular 12      |
-| Angular 11      |
-| Angular 10      |
-| Angular 9       |
-| Angular 8       |
+### Support versions Angular 8 >= 8.2.14
 
 \
 Author: `DaiDH`, Tel: `0845882882`

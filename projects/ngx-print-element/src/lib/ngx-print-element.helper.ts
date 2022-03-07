@@ -44,7 +44,7 @@ export const getMarkup = (elementHtml: any, options: any) => {
 
   // If inline styles or list of inline styles are specified, override inline styles
   if (options.styles) {
-    styles = Array.isArray(options.styles) ? options.styles : [options.styles];
+    styles = Array.isArray(options.styles) ? [...options.styles, `.print-none { display: none; }`] : [options.styles + `.print-none { display: none; }`];
   } else {
     styles = Array.prototype.slice
       .call(document.getElementsByTagName('style'))
@@ -75,7 +75,7 @@ export const getMarkup = (elementHtml: any, options: any) => {
 export const printHtml = (element: any, selfOptions = {}) => {
   const defaultOptions = {
     htmlType: 'domObj',
-    printMode: '',
+    printMode: 'template',
     pageTitle: '',
     templateString: '',
     popupProperties: '',
