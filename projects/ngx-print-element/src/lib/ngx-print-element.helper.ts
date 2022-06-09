@@ -1,3 +1,8 @@
+/**
+ * callPrint
+ * @param printWindow 
+ * @param iframe 
+ */
 export const callPrint = (printWindow: any, iframe: any) => {
   if (printWindow && printWindow.printPage) {
     printWindow.printPage();
@@ -11,11 +16,21 @@ export const callPrint = (printWindow: any, iframe: any) => {
   }
 };
 
+/**
+ * getBaseHref
+ * @returns 
+ */
 export const getBaseHref = () => {
   const port = (window.location.port) ? `:${window.location.port}` : '';
   return `${window.location.protocol}//${window.location.hostname}${port}${window.location.pathname}`;
 };
 
+/**
+ * getMarkup
+ * @param elementHtml 
+ * @param options 
+ * @returns 
+ */
 export const getMarkup = (elementHtml: any, options: any) => {
   const template = options.templateString;
   const templateRegex = new RegExp(/{{\s*printBody\s*}}/gi);
@@ -72,6 +87,11 @@ export const getMarkup = (elementHtml: any, options: any) => {
   return html.join('');
 };
 
+/**
+ * printHtml
+ * @param element 
+ * @param selfOptions 
+ */
 export const printHtml = (element: any, selfOptions = {}) => {
   const defaultOptions = {
     htmlType: 'domObj',
