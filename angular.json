@@ -42,6 +42,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-print-element"
+    }
+  },
+  "defaultProject": "ngx-print-element",
+  "cli": {
+    "analytics": "faebda5a-88d2-4803-9257-609322d82e85"
+  }
 }
