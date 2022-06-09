@@ -124,7 +124,9 @@ export class AppComponent {
 | styles | Set the internal style sheet for printing | string or string[] | null |
 
 
-### Support versions Angular 8 >= 8.2.14
+### Support versions
+  Angular 8 >= 8.0.14
+  Angular 9 >= 8.0.14-rc.1
 
 \
 Author: `DaiDH`, Tel: `0845882882`
