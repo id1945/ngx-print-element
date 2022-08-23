@@ -10,7 +10,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-print-element/tsconfig.lib.json",
             "project": "projects/ngx-print-element/ng-package.json"
@@ -28,23 +28,10 @@
             "tsConfig": "projects/ngx-print-element/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-print-element/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-print-element/tsconfig.lib.json",
-              "projects/ngx-print-element/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     }
   },
-  "defaultProject": "ngx-print-element",
   "cli": {
     "analytics": "faebda5a-88d2-4803-9257-609322d82e85"
   }

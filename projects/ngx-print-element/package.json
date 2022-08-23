@@ -44,6 +44,9 @@
     "type": "git",
     "url": "git+ssh://github.com/id1945/ngx-print-element.git"
   },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
