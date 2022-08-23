@@ -25,7 +25,7 @@ Need to import css
 @import '~ngx-print-element/styles.css';
 ```
 Printing data sheet with id is up to you.\
-If somewhere you don't want to display you can use class print-none
+If there is an element you don't want to display you can add the class ```print-none``` or ```invisible```
 
 ### 1# The first way doesn't need configuration
 ```html
@@ -40,7 +40,7 @@ If somewhere you don't want to display you can use class print-none
     <td>Maria Anders</td>
     <td>Germany</td>
   </tr>
-  <tr>
+  <tr class="vis">
     <td>Centro comercial Moctezuma</td>
     <td>Francisco Chang</td>
     <td>Mexico</td>
@@ -52,6 +52,11 @@ If somewhere you don't want to display you can use class print-none
 
 ### 2# The second way needs configuration
 ```html
+<style>
+  .vis {
+    visibility: hidden;
+  }
+</style>
 <table id="demo">
   <tr>
     <th>Company</th>
@@ -63,7 +68,7 @@ If somewhere you don't want to display you can use class print-none
     <td>Maria Anders</td>
     <td>Germany</td>
   </tr>
-  <tr>
+  <tr class="vis">
     <td>Centro comercial Moctezuma</td>
     <td>Francisco Chang</td>
     <td>Mexico</td>
@@ -87,10 +92,15 @@ export class AppComponent {
     pageTitle: 'Hello World',
     templateString: '<header>I\'m part of the template header</header>{{printBody}}<footer>I\'m part of the template footer</footer>',
     stylesheets: [{ rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' }],
-    styles: ['.table { color: red; }', '.table td { color: green; }']
+    styles: ['td { border: 1px solid black; color: green; }', 'table { border: 1px solid black; }', 'header, table, footer { margin: auto; text-align: center; }', '.vis { visibility: visible; }']
   }
 }
 ```
+
+You should be greeted with a nicely formatted table when you press print.
+
+![image](https://user-images.githubusercontent.com/73852487/186209319-74be5952-8bb6-40ef-8627-9159d542e8b1.png)
+
 
 #### Services
 ```typescript
@@ -125,12 +135,13 @@ export class AppComponent {
 
 
 ### Support versions
-  Angular 8 >= 8.0.14
-  Angular 9 >= 8.0.14-rc.1
+  Angular 8 >= 8.0.14\
+  Angular 9 >= 8.0.14-rc.1\
+  Angular 14 >= 14.0.0
 
 \
 Author: `DaiDH`, Tel: `0845882882`
 
 ### License
 
-[MIT License](https://github.com/id1945/ngx-print-element/blob/master/LICENSE). Copyright (c) 2021 DaiDH
+[MIT License](https://github.com/id1945/ngx-print-element/blob/master/LICENSE). Copyright (c) 2022 DaiDH
