@@ -1,0 +1,54 @@
+{
+  "name": "ngx-print-element",
+  "version": "2.0.16",
+  "description": "This library is built to provide a solution for printing on html elements.",
+  "keywords": [
+    "ng",
+    "ngx",
+    "pdf",
+    "a4",
+    "screen",
+    "paper",
+    "printer-screen",
+    "printer-paper",
+    "printing-paper",
+    "print",
+    "printing",
+    "document",
+    "print-document",
+    "angular",
+    "angular2",
+    "print-html",
+    "print-element",
+    "print-html-element",
+    "ng-print",
+    "ngx-print",
+    "ngx-printing",
+    "ngx-print-div",
+    "angular-print",
+    "ngx-print-html",
+    "ng-print-element",
+    "ngx-print-element",
+    "angular-print-html",
+    "angular-print-element",
+    "printing paper a4",
+    "print paper size",
+    "print paper a4 size",
+    "print paper design",
+    "print html angular",
+    "media print angular"
+  ],
+  "author": "DaiDH <duonghuudai.id002@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/id1945/ngx-print-element.git"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.1.3",
+    "@angular/core": "^14.1.3"
+  }
+}

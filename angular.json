@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-print-element": {
+      "projectType": "library",
+      "root": "projects/ngx-print-element",
+      "sourceRoot": "projects/ngx-print-element/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-print-element/tsconfig.lib.json",
+            "project": "projects/ngx-print-element/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-print-element/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-print-element/src/test.ts",
+            "tsConfig": "projects/ngx-print-element/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-print-element/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "faebda5a-88d2-4803-9257-609322d82e85"
+  }
+}
