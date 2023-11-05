@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="text-center">
+    <img src="https://raw.githubusercontent.com/id1945/ngx-print-element/master/ngx-print-element.png" alt="">
+    <h1 class="mb-5">ngx-print-element</h1>
+  </div>
+
+  <table #tableRef ngxPrintElement class="table table-bordered">
+    <tr>
+      <th>No</th>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td class="bg-success">02</td>
+      <td class="bg-success">Centro comercial Moctezuma</td>
+      <td class="bg-success">Francisco Chang</td>
+      <td class="bg-success">Mexico</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>AIS Playground</td>
+      <td>Nakhon Pathom</td>
+      <td>Thailand</td>
+    </tr>
+    <tr class="print-none"> <!-- No print -->
+      <td class="bg-danger">04</td>
+      <td class="bg-danger">FPT Software</td>
+      <td class="bg-danger">Cau Giay</td>
+      <td class="bg-danger">Vietnamese</td>
+    </tr>
+  </table>
+  
+  <!-- ElementRef -->
+  <h5 class="my-3">ElementRef</h5>
+  <ngx-print-element #element="element">
+    <button (click)="element.print(tableElement)" class="btn btn-info mr-1">Print default</button>
+  </ngx-print-element>
+
+  <!-- Service -->
+  <h5 class="my-3">Service</h5>
+  <button (click)="onPrint1(tableElement)" class="btn btn-info mr-1">Print default</button>
+  <button (click)="onPrint2(tableElement)" class="btn btn-info m-1">Template iframe</button>
+  <button (click)="onPrint3(tableElement)" class="btn btn-info m-1">Template new window</button>
+  
+  <!-- Modal -->
+  <ng-container>
+    <h5 class="my-3">Modal</h5>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal">
+      Open modal
+    </button>
+
+    <!-- Modal -->
+    <div #modalRef ngxPrintElement class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>ngx-print-element</p>
+            <p class="print-none">HELLO WORLD</p><!-- No print -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" (click)="onPrint1(modalElement)" class="btn btn-info">Print default</button>
+            <button type="button" (click)="onPrint2(modalElement)" class="btn btn-info">Print iframe</button>
+            <button type="button" (click)="onPrint3(modalElement)" class="btn btn-info">Print new window</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="text-center position-fixed fixed-bottom p-3">
+    <!-- license -->
+    <div><a href="https://github.com/id1945/ngx-print-element/blob/master/LICENSE">MIT License</a></div>
+    <!-- copyright -->
+    <div>Author: DaiDH</div>
+    <div>Copyright (C) 2022 - {{date | date: 'yyyy'}}</div>
+  </div>
+</div>
